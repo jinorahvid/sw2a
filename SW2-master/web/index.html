@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.: Bienvenido :.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="js/funciones.js" type="text/javascript"></script>
+    </head>
+    <body onload="ocultarPreloader()">
+        <div align="center" style="margin-top: 15%">
+            <div style="display: inline-block" id="icon_student">
+                <i class="large material-icons" onclick="showStudent()">perm_identity</i>
+                <br>Alumno
+            </div>
+            <div style="display: inline-block" id="icon_teacher">
+                <i class="large material-icons" onclick="showTeacher()">perm_identity</i>
+                <br>Profesor
+            </div>
+
+        </div>
+        <!-- ********* LOGIN STUDENT **********--->
+        <div id="student" hidden="" style="width: 100%;padding-left:10%;padding-right: 10%">
+            <div align="center">
+                <div class="input-field" align="center">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="user_std" type="text" class="validate" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="psw_std" type="password" class="validate" placeholder="Contraseña">
+                </div>
+                <button id="btn_login_std" class="btn waves-effect waves-light" onclick="loginStd()" name="action">Ingresar
+                    <i class="material-icons right">send</i>                        
+                </button>
+                <a id="btn_a_std" href="#" onclick="showRegStudent()" style="float: right;alignment-adjust: after-edge" >Registrar</a>
+                <div class="progress" id="log_std" style="width: 25%">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ********* LOGIN TEACHER **********--->
+        <div id="teacher" hidden="" style="width: 100%;padding-left:10%;padding-right: 10%">
+            <div align="center">
+                <div class="input-field" align="center">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="user_prof" type="text" class="validate" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="psw_prof" type="password" class="validate" placeholder="Contraseña">
+                </div>
+                <button id="btn_login_teach" class="btn waves-effect waves-light" onclick="loginTeacher()" name="action">Ingresar
+                    <i class="material-icons right">send</i>
+                </button>
+                <a id="btn_a_teach" href="#" onclick="showRegTeacher()" style="float: right;alignment-adjust: after-edge" >Registrar</a>
+                <div class="progress" id="log_t" style="width: 40%">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
